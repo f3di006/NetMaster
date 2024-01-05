@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Service">
+      <UniqueIdentifier>{bf1f2c99-0ed4-489e-a5bf-cf2896770bcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{1d1248d6-1c84-4d5e-a6c0-4ce61aabf753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Main">
+      <UniqueIdentifier>{d07cf630-12ac-40b0-95ce-b9c7491e4335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Net">
+      <UniqueIdentifier>{bc21ef91-5637-4964-83d9-a26492265391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Net\Http">
+      <UniqueIdentifier>{2dfb5406-8780-4bdf-8600-c3a2dab2fa85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Main\Screen">
+      <UniqueIdentifier>{bdf6f0c4-9e25-4f7e-8da7-cf3d9085acae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Log">
+      <UniqueIdentifier>{0dbeb086-3602-456d-8570-8593b962cd43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Strings">
+      <UniqueIdentifier>{7f50c2c8-5f6b-4012-a83a-9ff4e0192d5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Command">
+      <UniqueIdentifier>{f3727bb5-38b4-48d4-afe1-6420817be0f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Config">
+      <UniqueIdentifier>{095c5f13-9994-459c-8308-cb330956575c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Main\Monitor">
+      <UniqueIdentifier>{01490d6b-b61a-426e-8a6a-3c0f642fe4a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IPC">
+      <UniqueIdentifier>{97faaf3e-f669-4221-8529-e88428133290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UserProc">
+      <UniqueIdentifier>{c6ca12cb-84f5-4a39-96b9-7a6a190205fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UrlParser">
+      <UniqueIdentifier>{c64b9ee0-9f56-463e-a26b-a96f6b318169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RDP">
+      <UniqueIdentifier>{f09a1434-6ef2-4bd7-b46d-ca9534c0c047}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NetMaster_Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="service.cpp">
+      <Filter>Source Files\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Http.cpp">
+      <Filter>Source Files\Net\Http</Filter>
+    </ClCompile>
+    <ClCompile Include="Screen.cpp">
+      <Filter>Source Files\Main\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="Net.cpp">
+      <Filter>Source Files\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="Strings.cpp">
+      <Filter>Source Files\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Conf.cpp">
+      <Filter>Source Files\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Monitor.cpp">
+      <Filter>Source Files\Main\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="IPC.cpp">
+      <Filter>Source Files\IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="UserProc.cpp">
+      <Filter>Source Files\UserProc</Filter>
+    </ClCompile>
+    <ClCompile Include="LUrlParser.cpp">
+      <Filter>Source Files\UrlParser</Filter>
+    </ClCompile>
+    <ClCompile Include="RDP.cpp">
+      <Filter>Source Files\RDP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Globals.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="service.h">
+      <Filter>Source Files\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Http.h">
+      <Filter>Source Files\Net\Http</Filter>
+    </ClInclude>
+    <ClInclude Include="Screen.h">
+      <Filter>Source Files\Main\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="Net.h">
+      <Filter>Source Files\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Strings.h">
+      <Filter>Source Files\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Conf.h">
+      <Filter>Source Files\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Monitor.h">
+      <Filter>Source Files\Main\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="IPC.h">
+      <Filter>Source Files\IPC</Filter>
+    </ClInclude>
+    <ClInclude Include="UserProc.h">
+      <Filter>Source Files\UserProc</Filter>
+    </ClInclude>
+    <ClInclude Include="LUrlParser.h">
+      <Filter>Source Files\UrlParser</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RDP.h">
+      <Filter>Source Files\RDP</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NetMaster_Client.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
