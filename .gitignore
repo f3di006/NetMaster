@@ -1,10 +1,14 @@
 # Prerequisites
 *.d
+<<<<<<< HEAD
 /.vs
 /Debug
 /Release
 /NetMaster_Client/Debug
 /NetMaster_Client/Release
+=======
+
+>>>>>>> 67dd1188ba0a7d0207a2f6702671407864fbb486
 # Compiled Object files
 *.slo
 *.lo
