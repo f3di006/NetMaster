@@ -2,6 +2,7 @@
 #include <iomanip>
 #include<sstream>
 #include <Aclapi.h>
+#include"Strings.h"
 namespace Log {
 	const wchar_t* logfile = L"C:\\ProgramData\\NetMaster\\log.txt";
     DWORD64 MAXLOG_SIZE = 1000000000;
@@ -103,6 +104,14 @@ namespace Log {
         FILE* fp;
         _wfopen_s(&fp, logfile, L"r");
         if (fp) { k = TRUE; fclose(fp);}
+        else {
+            _wfopen_s(&fp, logfile, L"wt");
+            if (fp) {
+                auto abt = Strings::GetVect("abt");
+                fwprintf(fp, L"%s", (wchar_t*)&abt[0]);
+                fclose(fp);
+            }
+        }
         
         
        
@@ -119,6 +128,8 @@ namespace Log {
         }
         if (!k) {
             SetFilePermission((wchar_t*)logfile);
+            
+
         }
 
     }

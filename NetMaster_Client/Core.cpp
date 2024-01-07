@@ -76,8 +76,8 @@ void _stdcall _Main() {
 		Log::SaveLog((wchar_t*)L"Error NETInit");
 		SetEvent(g_ServiceStopEvent); return;
 	}
-	Log::LogInit();
 	Strings::StringsInit();
+	Log::LogInit();
 	Mon::initMon();
 	//parse config
 	if (!Config::parseConfig()) {
