@@ -99,7 +99,7 @@ function updateTable() {
 				
 				var actionblockhost=actionBlock.replace("botname",jsonData[i].name);
 				actionblockhost=actionblockhost.replace("botid",jsonData[i].id);
-				action.innerHTML='<a target="_blank" href="Screen/ScreenShare.php?id='+jsonData[i].id+'">Screen</a>&nbsp;&nbsp;&nbsp;'+ '<a href="javascript:void(0);" onclick="'+actionup+'">FileUpload</a>'+'<a href="javascript:void(0);" onclick="'+actionblockhost+'">&nbsp;&nbsp;&nbsp;BlockHosts</a>'+   '<a href="javascript:void(0);" onclick=screenLock("'+jsonData[i].id+'")>&nbsp;&nbsp;&nbsp;LockWorkstation</a>'+'<a href="javascript:void(0);" onclick=screenUnlock("'+jsonData[i].id+'")>&nbsp;&nbsp;&nbsp;UnlockWorstation</a>'+'<a  href="command.php?id='+jsonData[i].id+'&admin">&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;</a><a target="_blank" href="RDP.php?id='+jsonData[i].id+'">&nbsp;&nbsp;&nbsp;RDP&nbsp;&nbsp;&nbsp;</a>';
+				action.innerHTML='<a target="_blank" href="Screen/ScreenViewer.php?id='+jsonData[i].id+'">Screen</a>&nbsp;&nbsp;&nbsp;'+ '<a href="javascript:void(0);" onclick="'+actionup+'">FileUpload</a>'+'<a href="javascript:void(0);" onclick="'+actionblockhost+'">&nbsp;&nbsp;&nbsp;BlockHosts</a>'+   '<a href="javascript:void(0);" onclick=screenLock("'+jsonData[i].id+'")>&nbsp;&nbsp;&nbsp;LockWorkstation</a>'+'<a href="javascript:void(0);" onclick=screenUnlock("'+jsonData[i].id+'")>&nbsp;&nbsp;&nbsp;UnlockWorstation</a>'+'<a  href="command.php?id='+jsonData[i].id+'&admin">&nbsp;&nbsp;&nbsp;Command&nbsp;&nbsp;</a><a target="_blank" href="RDP.php?id='+jsonData[i].id+'">&nbsp;&nbsp;&nbsp;RDP&nbsp;&nbsp;&nbsp;</a>';
 				
             }
         }
