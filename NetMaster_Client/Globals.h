@@ -13,7 +13,7 @@
 #pragma comment(lib, "iphlpapi.lib")
 #define SERVICE_NAME L"NetMaster"
 void _stdcall _Main();
-extern std::vector<HANDLE> processes;
+
 
 enum COMMAND {
 	CMD=1,
