@@ -159,3 +159,12 @@ getreq(endpoint,null);
 getreq(endpoint,null);
 
 }
+function logout(){
+	var h=confirm("are you sure to logout ?");
+	if(h){
+		window.location.href = 'logout.php';
+		
+	}
+	
+	
+}

